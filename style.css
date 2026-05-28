@@ -1,0 +1,186 @@
+:root {
+    --primary-color: #333333; /* Darker grey for primary text contrast */
+    --secondary-color: #2980b9; /* Keep blue for accents like borders/focus */
+    --whatsapp-color: #25d366;
+    --bg-color: #f4f7f6;
+    --text-color: #333333;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 15px;
+}
+
+.header {
+    /* Cor base da "parede" */
+    background-color: #dadddf; 
+    
+    /* Textura de parede codificada em Base64 (À prova de falhas) */
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PScwIDAgMjAwIDIwMCcgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJz48ZmlsdGVyIGlkPSdub2lzZUZpbHRlcic+PGZlVHVyYnVsZW5jZSB0eXBlPSdmcmFjdGFsTm9pc2UnIGJhc2VGcmVxdWVuY3k9JzAuNzUnIG51bU9jdGF2ZXM9JzMnIHN0aXRjaFRpbGVzPSdzdGl0Y2gnLz48L2ZpbHRlcj48cmVjdCB3aWR0aD0nMTAwJScgaGVpZ2h0PScxMDAlJyBmaWx0ZXI9J3VybCgjbm9pc2VGaWx0ZXIpJyBvcGFjaXR5PScwLjI1Jy8+PC9zdmc+");
+    
+    color: #333333;
+    padding: 30px 20px;
+    text-align: center;
+    border-bottom: 5px solid var(--secondary-color);
+    box-shadow: inset 0 -10px 20px rgba(0,0,0,0.05); /* Sombreado interno */
+}
+
+#logo-placeholder {
+    font-weight: bold;
+    font-size: 28px;
+    margin-bottom: 8px;
+    color: #222222; 
+    text-shadow: 1px 1px 2px rgba(255,255,255,0.8);
+}
+
+.header p {
+    font-size: 14px;
+    color: #444444;
+    font-weight: 500;
+}
+.form-container {
+    padding: 25px 20px;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--primary-color);
+}
+
+input[type="text"], textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 15px;
+    transition: 0.3s;
+    outline: none;
+}
+
+input[type="text"]:focus, textarea:focus {
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 5px rgba(41, 128, 185, 0.2);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.radio-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.radio-option {
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    padding: 14px;
+    cursor: pointer;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.radio-option:hover {
+    border-color: var(--secondary-color);
+    background: #f0f8ff;
+}
+
+.radio-option.selected {
+    border-color: var(--secondary-color);
+    background: #e1f0fa;
+}
+
+.radio-option input {
+    width: auto;
+    accent-color: var(--secondary-color);
+}
+
+.btn-submit {
+    width: 100%;
+    border: none;
+    background: var(--whatsapp-color);
+    color: white;
+    padding: 16px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 6px 15px rgba(37, 211, 102, 0.3);
+    margin-top: 10px;
+}
+
+.btn-submit:hover {
+    transform: translateY(-2px);
+    background: #20bc59;
+}
+
+.footer {
+    text-align: center;
+    padding: 16px;
+    font-size: 13px;
+    color: #666;
+    background: #fafafa;
+    border-top: 1px solid #eee;
+}
+
+.whatsapp-float {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 60px;
+    height: 60px;
+    background: var(--whatsapp-color);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 28px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    z-index: 999;
+    transition: 0.3s;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+}
+
+@media(max-width: 500px) {
+    .container {
+        border-radius: 8px;
+    }
+    .form-container {
+        padding: 20px 15px;
+    }
+}
